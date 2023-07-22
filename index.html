@@ -271,7 +271,7 @@ mjx-container[display="true"] + br {
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/07/22/FHE20230722-3/" class="post-title-link" itemprop="url">FHE20230722-3</a>
+            <a href="/2023/07/22/FHE20230722-3/" class="post-title-link" itemprop="url">FHE GSW-FHEW-TFHE（3）</a>
         </h2>
 
         <div class="post-meta">
@@ -280,8 +280,9 @@ mjx-container[display="true"] + br {
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2023-07-22 17:23:50" itemprop="dateCreated datePublished" datetime="2023-07-22T17:23:50+08:00">2023-07-22</time>
+              <time title="Created: 2023-07-22 17:23:50 / Modified: 17:35:22" itemprop="dateCreated datePublished" datetime="2023-07-22T17:23:50+08:00">2023-07-22</time>
             </span>
 
           
@@ -295,7 +296,14 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <p>All right ! After the introduction to the LWE problem in the previous two blogs, now we can define Trivial GLWE ciphertexts which will be used in TFHE scheme.</p>
+<p>A trivial GLWE ciphertext of a message M has all the A_i set to zero and B equal to $\triangle M:(0,…,0,\triangle M) \in R_q^{k+1} $. When we instantiate GLWE with $k = n \in Z$ and $N = 1$ , we get LWE. Observe that $R_q$(resp.$R$) is actually $Z_q$(resp. $Z$) when $N = 1$</p>
+<p>$M_{\vec{s}} = = (\vec{a},b) = (a_0,…,a_{n-1},b)$ where $b = \sum^{n-1}_{i = 0} a_i \cdot s_i + \triangle M + e \in Z_q, (S_0,…,S_{n-1} \in {0,1}^n)$ , $a_i \in Z_q$ and $e$ is Gaussian distribution ,$a_i$ is uniform random.</p>
+<p>When we instaniate GLWE with $k = 1$ and $N$ a power of $Z$ we get RLWE:</p>
+<p>$M_S = (A,B)$ where $B = A \cdot S + \triangle M + E \in R_q$ , $E \in R_q$ is Gaussian distribution coefficient , $S \in R$ whose coefficient $\in {0,1}$ , $A \in R_q$ which is uniform random coefficient.</p>
+<p>Okay, the above is the definition of GLWE problem. In the next blog post , we will introduce the GSW problem , and its extended version, the RGSW problem , which can be used to construct the FHEW encryption scheme . The TFHE scheme , on the other hand , can be seen as the extension of the FHEW scheme.</p>
+<p>SEE YOU LATER :)</p>
+
       
     </div>
 
